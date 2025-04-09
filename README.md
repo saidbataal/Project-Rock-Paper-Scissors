@@ -31,14 +31,14 @@ This is a simple **Rock Paper Scissors** game built entirely with **JavaScript**
  4. Follow the instructions in the console to play the game.
 
 
-📁 Project Structure :
+ ## 📁 Project Structure :
 
 rock-paper-scissors/
 ├── index.html
 └── script.js
 
 
-📚 What I Used:
+ ## 📚 What I Used:
 
 
 . HTML (basic structure)
@@ -47,7 +47,7 @@ rock-paper-scissors/
 
 . Browser console for interaction
 
-🧠 What I Learned:
+## 🧠 What I Learned:
 
 . Working with prompt(), alert(), and console.log()
 
@@ -57,7 +57,7 @@ rock-paper-scissors/
 
 . Practicing loops and functions
 
-💡 Future Improvements:
+## 💡 Future Improvements:
 
 . Add a simple user interface
 
@@ -68,11 +68,11 @@ rock-paper-scissors/
 . Improve input validation
 
 
-🧑‍💻 Author:
+ ## 🧑‍💻 Author:
 
 Said Bataal
 
-📄 License:
+## 📄 License:
 
 This project is open source and free to use.
 
