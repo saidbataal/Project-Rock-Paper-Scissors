@@ -6,4 +6,9 @@ let result = Math.floor(Math.random() *3)
 else{return "scissors"}
 }
 
+function getHumanChoice(){
+let result = prompt("Choose rock, paper, or scissors:");
 
+
+return result.toLowerCase();
+}
