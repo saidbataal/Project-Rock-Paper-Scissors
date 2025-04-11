@@ -12,3 +12,5 @@ let result = prompt("Choose rock, paper, or scissors:");
 
 return result.toLowerCase();
 }
+let humanScore = 0;
+let computerScore = 0;
