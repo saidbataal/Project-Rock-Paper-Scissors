@@ -14,3 +14,9 @@ return result.toLowerCase();
 }
 let humanScore = 0;
 let computerScore = 0;
+
+
+
+const humanSelection = getHumanChoice();
+const computerSelection = getHumanChoice();
+
