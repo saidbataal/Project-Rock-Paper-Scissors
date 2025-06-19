@@ -6,12 +6,12 @@ function getComputerChoice() {
   else { return "scissors" }
 }
 
-function getHumanChoice() {
+/*function getHumanChoice() {
   let result = prompt("Choose rock, paper, or scissors:");
 
 
   return result.toLowerCase();
-}
+}*/
 
 
 
@@ -76,6 +76,43 @@ function playGame() {
 console.log(playGame());
 
 */
+const rock = document.querySelector(".rock");
+rock.addEventListener("click" , () => { playRound("rock", getComputerChoice())});
+
+
+
+
+const paper = document.querySelector(".paper");
+paper.addEventListener("click" , () => { playRound("paper", getComputerChoice())});
+
+
+
+
+const scissors = document.querySelector(".scissors");
+scissors.addEventListener("click" , () => { playRound("scissors", getComputerChoice())});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
