@@ -76,25 +76,32 @@ function playGame() {
 console.log(playGame());
 
 */
+
+
+
+
 const rock = document.querySelector(".rock");
-rock.addEventListener("click" , () => { playRound("rock", getComputerChoice())});
+rock.addEventListener("click" , () => {let result = getComputerChoice();
+  playRound("rock", result);computerChoice.textContent = "computer choice : " + result;});
 
 
 
 
 const paper = document.querySelector(".paper");
-paper.addEventListener("click" , () => { playRound("paper", getComputerChoice())});
+paper.addEventListener("click" , () => {let result = getComputerChoice();
+   playRound("paper", result);computerChoice.textContent = "computer choice : " + result;});
 
 
 
 
 const scissors = document.querySelector(".scissors");
-scissors.addEventListener("click" , () => { playRound("scissors", getComputerChoice())});
+scissors.addEventListener("click" , () => {let result = getComputerChoice();
+playRound("scissors", result);computerChoice.textContent = "computer choice : " + result;});
 
 
 
 
-
+const computerChoice = document.querySelector(".computerChoice");
 
 
 
