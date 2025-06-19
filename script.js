@@ -82,28 +82,31 @@ console.log(playGame());
 
 const rock = document.querySelector(".rock");
 rock.addEventListener("click" , () => {let result = getComputerChoice();
-  playRound("rock", result);computerChoice.textContent = "computer choice : " + result;});
+  playRound("rock", result);computerChoice.textContent = "computer choice : " + result;
+yourChoice.textContent = "your choice : rock";});
 
 
 
 
 const paper = document.querySelector(".paper");
 paper.addEventListener("click" , () => {let result = getComputerChoice();
-   playRound("paper", result);computerChoice.textContent = "computer choice : " + result;});
+   playRound("paper", result);computerChoice.textContent = "computer choice : " + result;
+  yourChoice.textContent = "your choice : paper";});
 
 
 
 
 const scissors = document.querySelector(".scissors");
 scissors.addEventListener("click" , () => {let result = getComputerChoice();
-playRound("scissors", result);computerChoice.textContent = "computer choice : " + result;});
+playRound("scissors", result);computerChoice.textContent = "computer choice : " + result;
+yourChoice.textContent = "your choice : scissors";});
 
 
 
 
 const computerChoice = document.querySelector(".computerChoice");
 
-
+const yourChoice = document.querySelector(".yourChoice");
 
 
 
