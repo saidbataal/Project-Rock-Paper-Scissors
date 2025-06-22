@@ -52,17 +52,17 @@ function playRound(humanChoice, computerChoice) {
 
 
 
-/*
+
 function playGame() {
   for (let i = 0; i < 5; i++) {
-     let humanSelection = getHumanChoice();
+     /*let humanSelection = getHumanChoice();*/
      let computerSelection = getComputerChoice();
-    console.log(`humanChoice : ${humanSelection}`);
-    console.log(`computerChoice : ${computerSelection}`);
+    /*console.log(`humanChoice : ${humanSelection}`);
+    console.log(`computerChoice : ${computerSelection}`);*/
     console.log(playRound(humanSelection, computerSelection));
    
-    console.log(`humanScore : ${humanScore}`);
-    console.log(`computerScore : ${computerScore}`);
+    /*console.log(`humanScore : ${humanScore}`);
+    console.log(`computerScore : ${computerScore}`);*/
     
   }
   if(humanScore > computerScore){return "you win";}
@@ -73,9 +73,9 @@ function playGame() {
 
 
 
-console.log(playGame());
+/*console.log(playGame());*/
 
-*/
+
 
 
 
@@ -83,7 +83,8 @@ console.log(playGame());
 const rock = document.querySelector(".rock");
 rock.addEventListener("click" , () => {let result = getComputerChoice();
   playRound("rock", result);computerChoice.textContent = "computer choice : " + result;
-yourChoice.textContent = "your choice : rock";});
+yourChoice.textContent = "your choice : rock";humanscore.textContent = "human score : " + humanScore ;
+computerscore.textContent = "computer score : " + computerScore;});
 
 
 
@@ -91,7 +92,8 @@ yourChoice.textContent = "your choice : rock";});
 const paper = document.querySelector(".paper");
 paper.addEventListener("click" , () => {let result = getComputerChoice();
    playRound("paper", result);computerChoice.textContent = "computer choice : " + result;
-  yourChoice.textContent = "your choice : paper";});
+  yourChoice.textContent = "your choice : paper";humanscore.textContent = "human score : " + humanScore ;
+computerscore.textContent = "computer score : " + computerScore;});
 
 
 
@@ -99,7 +101,8 @@ paper.addEventListener("click" , () => {let result = getComputerChoice();
 const scissors = document.querySelector(".scissors");
 scissors.addEventListener("click" , () => {let result = getComputerChoice();
 playRound("scissors", result);computerChoice.textContent = "computer choice : " + result;
-yourChoice.textContent = "your choice : scissors";});
+yourChoice.textContent = "your choice : scissors";humanscore.textContent = "human score : " + humanScore ;
+computerscore.textContent = "computer score : " + computerScore;});
 
 
 
@@ -117,20 +120,36 @@ const winner = document.querySelector(".winner");
 
 
 
+const humanscore = document.querySelector(".humanscore");
 
 
 
 
+const computerscore = document.querySelector(".computerscore");
 
 
+const round = document.querySelector(".round");
+
+const finaleResult = document.querySelector(".finaleResult");
+
+const reloadToPlay = document.querySelector(".reloadToPlay");
+
+const fiveRound = document.querySelectorAll("button");
+let clickCount = 0;
+fiveRound.forEach((button) =>{
+button.addEventListener("click", () => {
+
+clickCount++;
+
+if(clickCount < 5){round.textContent = `round ${clickCount}/5`;}
 
 
+else if (clickCount === 5) {if(humanScore > computerScore){finaleResult.textContent = "you win";}
+  else if (humanScore === computerScore){finaleResult.textContent = "equality";}
+  else{finaleResult.textContent = "you lose";};round.textContent = `round ${clickCount}/5`;
+  rock.disabled = true;paper.disabled = true;scissors.disabled = true;
+  reloadToPlay.textContent = "Game over! Please reload the page to play again."};
 
 
-
-
-
-
-
-
+});});
 
